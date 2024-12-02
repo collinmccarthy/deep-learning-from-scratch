@@ -1,0 +1,6 @@
+[submodule "externals/makemore"]
+	path = externals/makemore
+	url = https://github.com/karpathy/makemore.git
+[submodule "externals/micrograd"]
+	path = externals/micrograd
+	url = https://github.com/karpathy/micrograd
