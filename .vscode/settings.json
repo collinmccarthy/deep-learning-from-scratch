@@ -1,0 +1,41 @@
+{
+  "python.defaultInterpreterPath": "~/.conda/envs/dl_scratch/bin/python",
+  "python.languageServer": "Pylance",
+  "pylint.enabled": false,
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnSave": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.rulers": [
+      100
+    ],
+    "editor.defaultFormatter": "ms-python.black-formatter",
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+  },
+  "files.trimTrailingWhitespace": true,
+  "cSpell.words": [
+    "Autograd",
+    "backpropagation",
+    "exponentials",
+    "exponentiated",
+    "Interpretability",
+    "ipython",
+    "pyright",
+    "softmax"
+  ],
+  "cSpell.ignoreWords": [
+    "micrograd",
+    "pytest",
+    "topo"
+  ],
+  "cSpell.files": ["*.py", "*.md", "*.ipynb"]
+}
