@@ -1,12 +1,18 @@
 # NOTE: Using CUDA 12.1 due to same issue as:
 #   https://github.com/pytorch/pytorch/issues/134929#issuecomment-2429992580
-# Micrograd requirements
+
+# Micrograd
 --extra-index-url https://download.pytorch.org/whl/cu121
 torch==2.4.1+cu121
 numpy
 matplotlib
 graphviz
 pytest
+
+# Addtl from Makemore
+tensorboard
+
+# Formatting / notebooks
 black
 pyright
 ipykernel

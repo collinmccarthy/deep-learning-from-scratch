@@ -5,6 +5,18 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Makemore Bigram",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/dl_scratch/makemore/train.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--work-dir=${workspaceFolder}/dl_scratch/makemore/out",
+        "--max-steps=10",
+        "--type=bigram",
+      ]
+    },
+    {
       "name": "Test Micrograd",
       "type": "debugpy",
       "request": "launch",
@@ -12,7 +24,8 @@
       "cwd": "${workspaceFolder}",
       "args": [
         "dl_scratch/micrograd/test.py",
-        "-k", "test_micrograd_layer",
+        "-k",
+        "test_micrograd_layer",
       ]
     }
   ]
