@@ -5,18 +5,6 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Makemore Bigram",
-      "type": "debugpy",
-      "request": "launch",
-      "program": "${workspaceFolder}/dl_scratch/makemore/train.py",
-      "console": "integratedTerminal",
-      "args": [
-        "--work-dir=${workspaceFolder}/dl_scratch/makemore/out",
-        "--max-steps=10",
-        "--type=bigram",
-      ]
-    },
-    {
       "name": "Test Micrograd",
       "type": "debugpy",
       "request": "launch",
@@ -27,6 +15,32 @@
         "-k",
         "test_micrograd_layer",
       ]
-    }
+    },
+    {
+      "name": "Makemore Bigram",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/dl_scratch/makemore/train.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--input-file=${workspaceFolder}/dl_scratch/makemore/names.txt",
+        "--work-dir=${workspaceFolder}/dl_scratch/makemore/out",
+        "--max-steps=10",
+        "--type=bigram",
+      ]
+    },
+    {
+      "name": "Makemore MLP",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/dl_scratch/makemore/train.py",
+      "console": "integratedTerminal",
+      "args": [
+        "--input-file=${workspaceFolder}/dl_scratch/makemore/names.txt",
+        "--work-dir=${workspaceFolder}/dl_scratch/makemore/out",
+        "--max-steps=10",
+        "--type=mlp",
+      ]
+    },
   ]
 }

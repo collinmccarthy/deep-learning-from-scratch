@@ -1,5 +1,6 @@
 """
-Unmodified from https://github.com/karpathy/makemore/blob/master/makemore.py
+Modified from https://github.com/karpathy/makemore/blob/master/makemore.py
+- Added comments with shapes
 """
 
 import torch

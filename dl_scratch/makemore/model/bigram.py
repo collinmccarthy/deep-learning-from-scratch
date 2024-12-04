@@ -1,5 +1,6 @@
 """
-Unmodified from https://github.com/karpathy/makemore/blob/master/makemore.py
+Modified from https://github.com/karpathy/makemore/blob/master/makemore.py
+- Added comments with shapes
 """
 
 import torch
@@ -19,7 +20,7 @@ class Bigram(nn.Module):
     def __init__(self, config):
         super().__init__()
         n = config.vocab_size
-        self.logits = nn.Parameter(torch.zeros((n, n)))
+        self.logits = nn.Parameter(torch.zeros((n, n)))  # Shape (27,27)
 
     def get_block_size(self):
         return 1  # this model only needs one previous character to predict the next
@@ -27,13 +28,19 @@ class Bigram(nn.Module):
     def forward(self, idx, targets=None):
 
         # 'forward pass', lol
-        logits = self.logits[idx]
+        # idx shape: (N,L), e.g. (32,16); N = batch size, L = block size (max seq len)
+        # targets shape: (N,L) as well
+        logits = self.logits[idx]  # (N,L) -> (N,L,D), e.g. (32,16) -> (32,16,27)
 
         # if we are given some desired targets also calculate the loss
         loss = None
         if targets is not None:
             loss = F.cross_entropy(
-                logits.view(-1, logits.size(-1)), targets.view(-1), ignore_index=-1
+                # Logits: (N,L,D) -> (N*L,D), e.g. (32,16,27) -> (512,27)
+                logits.view(-1, logits.size(-1)),
+                # Targets: (N,L) -> (N*L,), e.g. (32,16) -> (512,)
+                targets.view(-1),
+                ignore_index=-1,
             )
 
         return logits, loss

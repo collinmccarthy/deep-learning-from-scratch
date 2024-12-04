@@ -4,3 +4,6 @@
 [submodule "externals/micrograd"]
 	path = externals/micrograd
 	url = https://github.com/karpathy/micrograd
+[submodule "externals/nn_zero_to_hero"]
+	path = externals/nn_zero_to_hero
+	url = https://github.com/karpathy/nn-zero-to-hero.git
