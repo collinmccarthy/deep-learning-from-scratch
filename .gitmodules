@@ -7,3 +7,9 @@
 [submodule "externals/nn_zero_to_hero"]
 	path = externals/nn_zero_to_hero
 	url = https://github.com/karpathy/nn-zero-to-hero.git
+[submodule "externals/minGPT"]
+	path = externals/mingpt
+	url = https://github.com/karpathy/minGPT.git
+[submodule "externals/nanogpt"]
+	path = externals/nanogpt
+	url = https://github.com/karpathy/nanoGPT.git

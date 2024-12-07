@@ -9,11 +9,17 @@ matplotlib
 graphviz
 pytest
 
-# Addtl from Makemore
+# Additional from Makemore
 tensorboard
 
-# Formatting / notebooks
+# Additional from nanoGPT
+transformers
+datasets
+tiktoken
+wandb
+tqdm
+
+# Additional for python formatting / notebooks
 black
 pyright
 ipykernel
-tqdm
