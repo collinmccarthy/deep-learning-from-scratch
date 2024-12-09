@@ -13,3 +13,6 @@
 [submodule "externals/nanogpt"]
 	path = externals/nanogpt
 	url = https://github.com/karpathy/nanoGPT.git
+[submodule "externals/picogpt"]
+	path = externals/picogpt
+	url = https://github.com/jaymody/picoGPT

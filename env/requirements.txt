@@ -19,6 +19,10 @@ tiktoken
 wandb
 tqdm
 
+# Additional for extra models
+einops  # lucidrains/vit-pytoch/simple_vit.py
+timm  # huggingface/timm/models/resnet.py
+
 # Additional for python formatting / notebooks
 black
 pyright
