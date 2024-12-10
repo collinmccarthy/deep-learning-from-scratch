@@ -42,7 +42,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.utils.checkpoint
-from torch.jit import Final
+from torch.jit import Final  # pyright: ignore[reportPrivateImportUsage]
 
 from timm.data import (
     IMAGENET_DEFAULT_MEAN,
@@ -53,26 +53,26 @@ from timm.data import (
     OPENAI_CLIP_STD,
 )
 from timm.layers import (
-    PatchEmbed,
-    Mlp,
-    DropPath,
-    AttentionPoolLatent,
-    RmsNorm,
-    PatchDropout,
-    SwiGLUPacked,
-    trunc_normal_,
-    lecun_normal_,
-    resample_patch_embed,
-    resample_abs_pos_embed,
-    use_fused_attn,
-    get_act_layer,
-    get_norm_layer,
-    LayerType,
+    PatchEmbed,  # pyright: ignore[reportPrivateImportUsage]
+    Mlp,  # pyright: ignore[reportPrivateImportUsage]
+    DropPath,  # pyright: ignore[reportPrivateImportUsage]
+    AttentionPoolLatent,  # pyright: ignore[reportPrivateImportUsage]
+    RmsNorm,  # pyright: ignore[reportPrivateImportUsage]
+    PatchDropout,  # pyright: ignore[reportPrivateImportUsage]
+    SwiGLUPacked,  # pyright: ignore[reportPrivateImportUsage]
+    trunc_normal_,  # pyright: ignore[reportPrivateImportUsage]
+    lecun_normal_,  # pyright: ignore[reportPrivateImportUsage]
+    resample_patch_embed,  # pyright: ignore[reportPrivateImportUsage]
+    resample_abs_pos_embed,  # pyright: ignore[reportPrivateImportUsage]
+    use_fused_attn,  # pyright: ignore[reportPrivateImportUsage]
+    get_act_layer,  # pyright: ignore[reportPrivateImportUsage]
+    get_norm_layer,  # pyright: ignore[reportPrivateImportUsage]
+    LayerType,  # pyright: ignore[reportPrivateImportUsage]
 )
-from ._builder import build_model_with_cfg
-from ._features import feature_take_indices
-from ._manipulate import named_apply, checkpoint_seq, adapt_input_conv
-from ._registry import generate_default_cfgs, register_model, register_model_deprecations
+from timm.models._builder import build_model_with_cfg
+from timm.models._features import feature_take_indices
+from timm.models._manipulate import named_apply, checkpoint_seq, adapt_input_conv
+from timm.models._registry import generate_default_cfgs, register_model, register_model_deprecations
 
 __all__ = ["VisionTransformer"]  # model_registry will add each entrypoint fn to this
 
